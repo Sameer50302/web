@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="demostyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About Us</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jpeg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+<!---------Blog Page Content---------------------->
+
+    <section class="blog-content" id="bg-cont">              
+        <h1>Team Members</h1>
+        <div class="blog-row">
+            <div class="teacher-col">
+                <div class="profile">
+                    
+               <img src="images/team member 1.jpg"> 
+                    <h2>Anchal Mam</h2>
+                    <h3>Receptionist Of Institute<h3>
+                    <p>Click on image to view full image<p>
+                </div>
+            </div>
+            <div class="teacher-col">
+                <div class="profile">
+                    
+                 <img src="images/team memberc 2.jpg"> 
+                    <h2>Vikas Sir</h2>
+                    <h3>Head Of Institute</h3>
+                    <p>Click on image to view full image<p></p>
+                 
+                </div>
+            </div>
+                       
+        </div>
+
+        <div class="popup-image"> 
+            <span>&times;</span>
+            <img src="images/about-gaurav.jpeg">
+        </div>
+
+
+        <div class="comment-box">
+            <h3>Leave Comment</h3>
+            <form class="comment-form">
+                <input type="text" placeholder="Enter Name">
+                <input type="email" placeholder="Enter Email Id">
+                <textarea rows="5" placeholder="Your Comment"></textarea>
+                <button type="submit" class="hero-btn red-btn">Post Comment</button>
+                <a href="demo.html" class="hero-btn red-btn">View data</a>
+            </form>    
+        </div>
+    </section>							   
+					  
+<!---------Footer---------------------->
+<section class="footer">
+    <p>Contact Us On Our Various Social Media Platforms</p>
+    <div class="icons">
+        <a href="https://www.facebook.com/Mukhiya-Academy-1672452456129840/?ti=as" target="_blank" class="fa fa-facebook fa-lg"></a>
+        <a href="#" target="_blank" class="fa fa-twitter fa-lg"></a>
+        <a href="https://instagram.com/mukhiya_academy?igshid=YmMyMTA2M2Y=" target="_blank" class="fa fa-instagram fa-lg"></a>
+        <a href="#" target="_blank" class="fa fa-linkedin fa-lg"></a>
+    </div>
+</section>
+
+ <!-------JavaScript for toggle menu------>
+ <script>
+
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+    document.querySelectorAll('.profile img').forEach(image =>{
+      image.onclick = () => {
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+      }
+    });
+
+    document.querySelector('.popup-image span').onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'none';
+    }
+
+</script>
+
+
+</body>
+</html>
